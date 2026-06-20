@@ -1,37 +1,61 @@
 [ {
   "username" : "bug",
   "user_id" : "f3ccde78-e7c7-481c-9b5b-b4bacf772d5d",
-  "password" : "fixed",
   "hashed_password" : "$2a$10$EqL0uYQDqvTeINEJWp.fdOubTN/T9RDOBj1/zgAEUH1xLwyA4ppKS",
   "tickets_booked" : [ ]
 }, {
   "username" : "signupTesting",
   "user_id" : "6c8c4ff6-477f-404c-9e97-b842c55a3131",
-  "password" : "testing",
   "hashed_password" : "$2a$10$UrjL7jbCekl8ekvcpn8yke82pMmbDAPbn95/AR1GpDttONaUpGsky",
   "tickets_booked" : [ ]
 }, {
   "username" : "Hello",
   "user_id" : "243c8da8-f739-431c-9b5b-1b6a4dd12885",
-  "password" : "World",
   "hashed_password" : "$2a$10$Vj1E9zbWmSU.zAl24uujJ.rStp90FCEhhYLCWPFUezDVKwCHpFvRG",
   "tickets_booked" : [ ]
 }, {
   "username" : "a",
   "user_id" : "2177f39a-3e91-4bd5-b9db-1d5836859e3c",
-  "password" : "b",
   "hashed_password" : "$2a$10$a1GCjTc1YhWpxQ3RPjJLrOAGXs0GlQX.lSONodi7JPFK8BCO0pGxa",
   "tickets_booked" : [ ]
 }, {
   "username" : "2",
   "user_id" : "125f1a3a-c1c2-4330-baeb-35d46f799468",
-  "password" : "f",
   "hashed_password" : "$2a$10$HSdtu1lqYYb3Z.QgQimijORIlxdJ5EN4qS1grRZjXgzt2SXp9N0Ti",
   "tickets_booked" : [ ]
 }, {
   "username" : "f",
   "user_id" : "d6c0516e-5228-47b9-a469-5aedbe7f12b2",
-  "password" : "f",
   "hashed_password" : "$2a$10$Ww//xPCmZ2v4GOk1k64vruhSJ7xr7Gs.A//vRbFqDTRLyQa.pt2Ui",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "kenny",
+  "user_id" : "6d50137f-9d3f-4a8c-8c57-304193bd075f",
+  "hashed_password" : "$2a$10$Evts172NQVg6SoIHUEIOX.KUcUu4RrxCHH6./HELTBpAZI6y3jS06",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "Kenny",
+  "user_id" : "68568553-f755-4c7c-acd7-71ede5113176",
+  "hashed_password" : "$2a$10$ypH7DYRZgNGbGTQ35oNbL.u6lNWdlRhKuBPVQkNDZDGyUyv7BMoQq",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "ken",
+  "user_id" : "f5cf32d3-cc8d-4bdc-87e2-5f111970ce84",
+  "hashed_password" : "$2a$10$BK/r/myrNWUbGWkTbKlIve.yQODQ77BmmdVQF2ap/BdjXCXxAMa/u",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "k",
+  "user_id" : "31076665-6939-408e-9b3f-7b2788ab3ab7",
+  "hashed_password" : "$2a$10$LJf3CRpvPdC6F7Z8sT04EuW15DVJ47xwTSYUILjLMHKgy0sC1tJ9.",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "l",
+  "user_id" : "b3bf55df-28d3-4e77-9f11-f16ee513aec7",
+  "hashed_password" : "$2a$10$CfxX/.VkohIm6Jh5veQ0a.OBDJodaSq8IdheEp1HSdht.2Qrcd5qq",
+  "tickets_booked" : [ ]
+}, {
+  "username" : "m",
+  "user_id" : "5c56db83-44ce-4cb5-9b81-733c14127e03",
+  "hashed_password" : "$2a$10$Bw7ICw9SLPzR3rE3kRLWaOuLIFLEe3Zpmbk7hTLXkqXZeHOBi9usq",
   "tickets_booked" : [ ]
 } ]

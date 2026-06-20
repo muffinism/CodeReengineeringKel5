@@ -13,28 +13,23 @@ public class Ticket {
     //Fields
     private String ticketId;
     private String userId;
-    private String source;
-    private String destination;
+    private Route route;
     private String dateOfTravel;
     private Train train;
 
     //Constructor
     public Ticket(){}
 
-    public Ticket(String ticketId, String userId, String source, String destination, String dateOfTravel, Train train){
+    public Ticket(String ticketId, String userId, Route route, String dateOfTravel, Train train){
         this.ticketId = ticketId;
         this.userId = userId;
-        this.source = source;
-        this.destination = destination;
+        this.route = route;
         this.dateOfTravel = dateOfTravel;
         this.train = train;
     }
 
-
-
-
     public String getTicketInfo(){
-        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s", ticketId, userId, source, destination, dateOfTravel);
+        return String.format("Ticket ID: %s belongs to User %s from %s to %s on %s", ticketId, userId, route.getSource(), route.getDestination(), dateOfTravel);
     }
 
     public String getTicketId(){
@@ -44,13 +39,13 @@ public class Ticket {
     public void setTicketId(String ticketId){
         this.ticketId = ticketId;
     }
-
-    public String getSource(){
-        return source;
+    
+    public Route getRoute() {
+    	return route; 
     }
-
-    public void setSource(String source){
-        this.source = source;
+    
+    public void setRoute(Route route) {
+    	this.route = route; 
     }
 
     public String getUserId(){
@@ -59,14 +54,6 @@ public class Ticket {
 
     public void setUserId(String userId){
         this.userId = userId;
-    }
-
-    public String getDestination(){
-        return destination;
-    }
-
-    public void setDestination(String destination){
-        this.destination = destination;
     }
 
     public String getDateOfTravel(){

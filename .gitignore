@@ -3,3 +3,14 @@
 
 # Ignore Gradle build output directory
 build
+/target/
+
+# Eclipse/IDE metadata files
+.classpath
+.project
+.settings/
+bin/
+app/.classpath
+app/.project
+app/.settings/
+app/bin/

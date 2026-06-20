@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
@@ -14,28 +15,22 @@ public class User {
 
     private String username;
     private String userId;
-    private String password;
     private String hashedPassword;
     private List<Ticket> ticketsBooked;
 
-    // Constructor
+   
     public User(){}
 
-    public User(String username, String password, String hashedPassword, List<Ticket> ticketsBooked, String userId){
+    public User(String username, String hashedPassword, List<Ticket> ticketsBooked, String userId){
         this.username = username;
         this.userId = userId;
-        this.password = password;
         this.hashedPassword = hashedPassword;
-        this.ticketsBooked = ticketsBooked != null ? ticketsBooked : Collections.emptyList(); // Safe handling for null lists
+        this.ticketsBooked = ticketsBooked != null ? ticketsBooked : Collections.emptyList();
     }
 
-    // Getter's
+    
     public String getUsername() {
         return username;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     public String getHashedPassword() {
@@ -47,7 +42,7 @@ public class User {
     }
 
     public void printTickets(){
-//        System.out.println("Debugged User.java -> printTickets()");
+
         if(ticketsBooked.isEmpty()){
             System.out.println("No tickets booked yet!");
             return;
@@ -63,7 +58,7 @@ public class User {
     }
 
 
-    // Setter's
+    
     public void setUsername(String username) {
         this.username = username;
     }
@@ -78,6 +73,15 @@ public class User {
 
     public void setHashedPassword(String hashedPassword) {
         this.hashedPassword = hashedPassword;
+    }
+    
+    public boolean cancelTicket(String ticketId){
+        if (ticketId == null || ticketId.isEmpty()) {
+            System.out.println("Ticket ID cannot be null or empty.");
+            return Boolean.FALSE;
+        }
+        return this.getTicketsBooked().removeIf(ticket -> ticket.getTicketId().equals(ticketId) );
+        
     }
 }
 

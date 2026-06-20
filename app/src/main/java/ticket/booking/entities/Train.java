@@ -15,17 +15,16 @@ public class Train {
 
     private String trainNo;
 
-    private List<List<Integer>> seats;
+    private SeatLayout seats;
 
     private Map<String, String> stationTimes;
 
     private List<String> stations;
 
 
-
     public Train(){}
 
-    public Train(String trainId, String trainNo, List<List<Integer>> seats,
+    public Train(String trainId, String trainNo, SeatLayout seats,
                  Map<String, String> stationTimes, List<String> stations){
         this.trainId = trainId;
         this.trainNo = trainNo;
@@ -33,16 +32,27 @@ public class Train {
         this.stationTimes = stationTimes;
         this.stations = stations;
     }
+    
+    public void displayTrainDetails(int index) {
+        System.out.println(index + ". Train ID: " + this.trainId + " | Train No: " + this.trainNo);
+        System.out.println("   Route: " + String.join(" ➝ ", this.stations));
+        System.out.println("   Timings:");
+        if (this.stationTimes != null) {
+            for (Map.Entry<String, String> entry : this.stationTimes.entrySet()) {
+                System.out.println("     Time " + entry.getKey() + " - " + entry.getValue());
+            }
+        }
+    }
 
     public List<String> getStations(){
         return stations;
     }
 
-    public List<List<Integer>> getSeats() {
+    public SeatLayout getSeats() {
         return seats;
     }
 
-    public void setSeats(List<List<Integer>> seats){
+    public void setSeats(SeatLayout seats){
         this.seats = seats;
     }
 
@@ -76,5 +86,22 @@ public class Train {
 
     public String getTrainInfo(){
         return String.format("Train ID: %s Train No: %s", trainId, trainNo);
+    }
+
+    public String getStartStation(){
+        return this.getStations().getFirst();
+    }
+
+    public String getEndStation(){
+        return this.getStations().getLast();
+    }
+    
+    public boolean isValidTrain(Route route) {
+
+        
+        int sourceIndex = this.stations.indexOf(route.getSource());
+        int destinationIndex = this.stations.indexOf(route.getDestination());
+
+        return  sourceIndex != -1 && destinationIndex != -1 && sourceIndex < destinationIndex;
     }
 }
